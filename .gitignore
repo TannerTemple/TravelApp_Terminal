@@ -1,0 +1,11 @@
+# Ignore compiled class files
+*.class
+
+# Ignore VS Code project settings
+.classpath
+.project
+.settings/
+.vscode/
+
+# Ignore OS files
+.DS_Store
