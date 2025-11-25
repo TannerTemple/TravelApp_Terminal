@@ -4,33 +4,34 @@ getters and setters for each flights values
 */ 
 
 public class Flight {
-    private String to;
-    private String date;
     private String from;
+    private String dest;
+    private String date;      
     private double price;
     private String airline;
-    // private String dest;
+    private int stops;
 
-    public Flight (String date, String from, String to, double price, String airline) {
-        this.date = date;
+    public Flight (String from, String dest, String date, double price, String airline, int stops) {
         this.from = from;
-        this.to = to;
+        this.dest = dest;
+        this.date = date;
         this.price = price;
         this.airline = airline;
+        this.stops = stops;
     }
 
-    public String getTo () {        //not sure if needed
-        return to;
+    public String getDest () {        
+        return dest;
     }
-    public void setTo(String newTo) {
-        this.to=newTo;
+    public void setDest(String newDest) {
+        this.dest=newDest;
     }
 
     public String getFrom () {
         return from;
     }
-    public void setFrom(String newFrom) {
-        this.from = newFrom;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
     public String getDate () {
@@ -54,13 +55,27 @@ public class Flight {
         this.airline = newAirline;
     }
 
-    // public String getDest() {
-    //     return dest;
-    // }
-    // public void setDest(String newDest) {
-    //     this.to = newDest;
-    // }
+    public int getStops() {
+        return stops;
+    }
+    public void setDest(int stops) {
+        this.stops = stops;
+    }
 
+
+    @Override
+    public String toString() {
+        String stopText;
+        if (stops == 1) {
+            stopText = ("1 stop");
+        }
+        else stopText = (stops + " stops");
+        return from + " -> " + dest +
+            " | " + date +
+            " | $" + price +
+            " | " + airline +
+            " | " + stopText;
+}
 
 
 

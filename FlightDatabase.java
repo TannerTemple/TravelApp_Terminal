@@ -24,8 +24,8 @@ public class FlightDatabase {
                 double price = Double.parseDouble(parts[3]);
                 String airline = parts[4];  
 
-                Flight f = new Flight(date, from, to, price, airline);
-                flights.add(f);
+                // Flight f = new Flight(date, from, to, price, airline);
+                // flights.add(f);
             }
         } catch (IOException e) {
             e.printStackTrace();
