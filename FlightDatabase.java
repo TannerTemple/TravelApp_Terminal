@@ -21,9 +21,10 @@ public class FlightDatabase {
                 String date = parts[0];           
                 String from = parts[1];           
                 String to = parts[2];             
-                double price = Double.parseDouble(parts[3]);  
+                double price = Double.parseDouble(parts[3]);
+                String airline = parts[4];  
 
-                Flight f = new Flight(date, from, to, price);
+                Flight f = new Flight(date, from, to, price, airline);
                 flights.add(f);
             }
         } catch (IOException e) {

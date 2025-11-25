@@ -22,8 +22,44 @@ public class TravelApp {
 
         // Flight f1 = new Flight ("Paris", 500 );
 
-        UseApi apiData = new UseApi();
-        apiData.testApi(homeAirport, leaveDate);
+        //UseApi apiData = new UseApi();
+       // UseApi.testApi(homeAirport, leaveDate);     //old call
+
+        //added below
+
+        List <String> europeDests = new ArrayList<>() { {
+            add("LGW");
+            add("DUB");
+            // add("LIS");
+            // add("BCN");
+            // add("MXP");
+            // add("CPH");
+            // add("MAD");
+            // add("CDG");
+            // add("AMS");
+            // add("FCO");
+            // add("BER");
+            // add("ATH");
+            // add("FRA");
+            // add("OSL");
+            // add("BRU");
+            // add("ZRH");
+            // add("WAW");
+            // add("MUC");
+            // add("BUD");
+            // add("PRG");
+            // add("LHR");
+            // add("IST");
+            // add("ORY");
+            // add("PMI");
+        }   
+        };
+
+        for (int i = 0; i< europeDests.size(); i++) {
+            UseApi.testApi(homeAirport, leaveDate, europeDests.get(i));
+        }
+
+        //added above
 
         FlightDatabase db = new FlightDatabase();
         db.loadFlights("FlightDatabase.txt");
