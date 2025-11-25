@@ -1,3 +1,12 @@
+/* Flight Database has two methods
+1) loadFlights: uses the flight database to build an 
+   array list, flight, of Flight class objects. 
+2) findFlights: takes two arguments and only adds
+   results from the correct user inputted airport on the 
+   correct user inputted date. 
+   */
+
+
 import java.io.*;
 import java.util.*;
 
@@ -23,11 +32,11 @@ public class FlightDatabase {
     }
 
 
-public List<Flight> findFlights(String from, String date) {         //find flights **compares** date and homeAP columns of **database and Uinput**
+public List<Flight> findFlights(String currentInputFrom, String currentInputDate) {         //find flights **compares** date and homeAP columns of **database and Uinput**
     List<Flight> results = new ArrayList<>();
     for (int i = 0; i< flights.size(); i++) {
         Flight f = flights.get(i);
-        if (f.getFrom().equalsIgnoreCase(from) && f.getDate().equals(date)) {
+        if (f.getFrom().equalsIgnoreCase(currentInputFrom) && f.getDate().equals(currentInputDate)) {
             results.add(f);
         }
     }

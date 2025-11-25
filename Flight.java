@@ -1,3 +1,8 @@
+/* 
+Basic Flight class that constructs each flight and uses
+getters and setters for each flights values
+*/ 
+
 public class Flight {
     private String to;
     private String date;
@@ -27,14 +32,6 @@ public class Flight {
     public void setDest(String newDest) {
         this.to = newDest;
     }
-
-
-
-    // public showFlightDetails() {
-
-
-    // }
-
 
 
 }

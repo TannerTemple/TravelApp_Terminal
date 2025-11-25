@@ -14,13 +14,16 @@ public class TravelApp {
         System.out.println("What is your home airport?");
         String homeAirport = scanner.next();
 
-        System.out.println ("When are you leaving? (format: 2025-10-25)");
+        System.out.println ("When are you leaving? (format: 2025-10-25)"); //MUST be yyyy-mm-dd
         String leaveDate = scanner.next();
 
         //things that don't change: from airport, date
 
 
         // Flight f1 = new Flight ("Paris", 500 );
+
+        UseApi apiData = new UseApi();
+        apiData.testApi(homeAirport, leaveDate);
 
         FlightDatabase db = new FlightDatabase();
         db.loadFlights("FlightDatabase.txt");
